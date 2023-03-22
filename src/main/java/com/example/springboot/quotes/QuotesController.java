@@ -42,13 +42,8 @@ public class QuotesController {
       return quotesService.randomQuotes();
     }
 
-    //@GetMapping(path = "/getrandom")
-    //public List<Quotes> findRandomQuotes() {
-    //     return quotesService.findRandomQuotes();
-    // }
-
-    @GetMapping(path ="/getByString")
-    public List<Quotes> getByString(){
+    @GetMapping(path ="/getBytext")
+    public List<Quotes> getByString(@RequestParam String text){
         return quotesService.getByString();
     }
 

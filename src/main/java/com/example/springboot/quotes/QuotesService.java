@@ -32,7 +32,7 @@ public class QuotesService {
     }
 
     public void addNewQuote(Quotes quotes){
-        Optional<Quotes> quotesOptional = quotesRepository.
+    Optional<Quotes> quotesOptional = quotesRepository.
         findQuotesByAuthor(quotes.getAuthor());
         if (quotesOptional.isPresent()) {
             throw new IllegalStateException("Author exists");
